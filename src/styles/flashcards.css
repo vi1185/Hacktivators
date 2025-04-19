@@ -1,0 +1,58 @@
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Add smooth transitions for all transforms */
+* {
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Ensure cards maintain their shape during rotation */
+.card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+/* Add a subtle shadow effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure content remains readable during rotation */
+.card-content {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+/* Add a subtle gradient background to cards */
+.card {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+}
+
+/* Add a subtle border to cards */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle hover effect */
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Ensure text remains crisp during animation */
+.card * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
