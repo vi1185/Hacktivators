@@ -1,0 +1,71 @@
+```mermaid
+graph LR
+    %% User Input Section
+    A[🎯 User Input] -->|Topic<br>Duration<br>Level| B[📊 Initial Assessment]
+    
+    %% AI Processing Section
+    B -->|Analyze| C[🤖 AI Assessment Agent]
+    C -->|Evaluate| D[🔍 Knowledge Analysis]
+    D -->|Structure| E[📚 Course Generation]
+    E -->|Create| F[📑 Module Development]
+    F -->|Plan| G[📝 Lesson Creation]
+    G -->|Deliver| H[🎓 Learning Experience]
+
+    %% Additional Processing Steps
+    C -->|Skill Check| I[📈 Skill Evaluation]
+    I -->|Path Design| J[🎯 Learning Path]
+    J -->|Feed| E
+    
+    D -->|Identify| K[📋 Prerequisites]
+    K -->|Map| L[🗺️ Dependency Graph]
+    L -->|Feed| E
+    
+    F -->|Generate| M[📊 Practice Exercises]
+    M -->|Create| N[🎯 Assessments]
+    N -->|Feed| G
+    
+    G -->|Prepare| O[📱 Interactive Content]
+    O -->|Deliver| H
+
+    %% Styling
+    classDef user fill:#f9f,stroke:#333,stroke-width:2px
+    classDef process fill:#bbf,stroke:#333,stroke-width:2px
+    classDef ai fill:#f96,stroke:#333,stroke-width:2px
+    classDef output fill:#9f9,stroke:#333,stroke-width:2px
+    classDef support fill:#ffd,stroke:#333,stroke-width:2px
+
+    class A,H user
+    class B process
+    class C,D,E,F,G ai
+    class I,J,K,L,M,N,O support
+    class H output
+
+    %% Subgraphs for better organization
+    subgraph "User Interaction"
+        A
+        B
+        H
+    end
+
+    subgraph "AI Core Processing"
+        C
+        D
+        E
+        F
+        G
+    end
+
+    subgraph "Supporting Processes"
+        I
+        J
+        K
+        L
+        M
+        N
+        O
+    end
+
+    %% Add some visual enhancements
+    linkStyle 0 stroke:#666,stroke-width:2px
+    linkStyle 1,2,3,4,5,6,7,8,9,10,11,12,13,14 stroke:#333,stroke-width:2px
+``` 

@@ -1,0 +1,13 @@
+<script>start("d:\\New folder (21)\\Hacktivators\\.git copy\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow(".git",".git",1,0,"0 B",1745056850,"4/19/25, 3:30:50 PM");</script>
+<script>addRow("hooks","hooks",1,0,"0 B",1745056608,"4/19/25, 3:26:48 PM");</script>
+<script>addRow("info","info",1,0,"0 B",1745056608,"4/19/25, 3:26:48 PM");</script>
+<script>addRow("logs","logs",1,0,"0 B",1745056608,"4/19/25, 3:26:48 PM");</script>
+<script>addRow("objects","objects",1,0,"0 B",1745056608,"4/19/25, 3:26:48 PM");</script>
+<script>addRow("refs","refs",1,0,"0 B",1745056608,"4/19/25, 3:26:48 PM");</script>
+<script>addRow("config","config",0,341,"341 B",1742282110,"3/18/25, 12:45:10 PM");</script>
+<script>addRow("description","description",0,73,"73 B",1742282033,"3/18/25, 12:43:53 PM");</script>
+<script>addRow("HEAD","HEAD",0,21,"21 B",1742282037,"3/18/25, 12:43:57 PM");</script>
+<script>addRow("index","index",0,9084,"8.9 kB",1742282037,"3/18/25, 12:43:57 PM");</script>
+<script>addRow("packed-refs","packed-refs",0,112,"112 B",1742282037,"3/18/25, 12:43:57 PM");</script>

@@ -1,0 +1,134 @@
+%% Skillsurge AI Platform - User Flow Diagrams
+
+%% 1. Complete User Journey Flow
+graph TD
+    Start([Start]) --> Visit[Visit Platform]
+    Visit --> Landing[Landing Page]
+    Landing --> UserType{New/Returning?}
+    
+    %% New User Path
+    UserType -->|New User| Register[Register Account]
+    Register --> Assessment[Take Initial Assessment]
+    Assessment --> Profile[Generate Learning Profile]
+    Profile --> Recommendations[Course Recommendations]
+    
+    %% Returning User Path
+    UserType -->|Returning User| Login[Login]
+    Login --> Dashboard[Main Dashboard]
+    
+    %% Common Path
+    Recommendations --> Dashboard
+    Dashboard --> Activities{Choose Activity}
+    
+    %% Activity Paths
+    Activities -->|Learn| Courses[Access Courses]
+    Activities -->|Practice| Exercises[Do Exercises]
+    Activities -->|Review| Flashcards[Use Flashcards]
+    Activities -->|Test| Assessments[Take Assessments]
+    
+    %% Progress Tracking
+    Courses --> Progress[Track Progress]
+    Exercises --> Progress
+    Flashcards --> Progress
+    Assessments --> Progress
+    
+    Progress --> Goals{Goals Met?}
+    Goals -->|Yes| Certificate[Earn Certificate]
+    Goals -->|No| Dashboard
+
+%% 2. Course Creation and Management Flow
+graph LR
+    Start([Start]) --> CreateCourse[Create Course]
+    CreateCourse --> DefineGoals[Define Learning Goals]
+    DefineGoals --> SelectTopic[Select Topic]
+    SelectTopic --> SetParams[Set Parameters]
+    SetParams --> Structure[Create Structure]
+    Structure --> Review{Review}
+    Review -->|Adjust| SetParams
+    Review -->|Approve| Publish[Publish Course]
+    Publish --> Monitor[Monitor Progress]
+    Monitor --> Update{Update Needed?}
+    Update -->|Yes| Revise[Revise Content]
+    Update -->|No| Complete([Complete])
+    Revise --> Review
+
+%% 3. Learning Session Flow
+graph TD
+    Start([Start Session]) --> CheckDash[Check Dashboard]
+    CheckDash --> Plan[Plan Session]
+    Plan --> Choose{Choose Activity}
+    
+    Choose -->|Course| Course[Course Content]
+    Choose -->|Practice| Practice[Practice Exercises]
+    Choose -->|Review| Review[Flashcard Review]
+    
+    Course --> Complete[Complete Activity]
+    Practice --> Complete
+    Review --> Complete
+    
+    Complete --> Track[Track Progress]
+    Track --> Achieve{Achievement?}
+    Achieve -->|Yes| Badge[Earn Badge]
+    Achieve -->|No| Next[Next Activity]
+    Badge --> Next
+    Next --> End([End Session])
+
+%% 4. Assessment and Progress Flow
+graph TD
+    Start([Start Assessment]) --> Type{Assessment Type}
+    
+    Type -->|Knowledge Check| Quick[Quick Quiz]
+    Type -->|Module Test| Module[Module Assessment]
+    Type -->|Final| Final[Final Exam]
+    
+    Quick --> Score[Calculate Score]
+    Module --> Score
+    Final --> Score
+    
+    Score --> Analyze[Analyze Performance]
+    Analyze --> Report[Generate Report]
+    Report --> Recommend[Recommendations]
+    
+    Recommend --> Action{Next Action}
+    Action -->|Review| Review[Review Material]
+    Action -->|Advance| Next[Next Module]
+    Action -->|Complete| Cert[Certificate]
+
+%% 5. Support and Resource Access Flow
+graph LR
+    Start([Need Help]) --> Type{Help Type}
+    
+    Type -->|Quick Help| AI[AI Assistant]
+    Type -->|Documentation| Docs[Help Docs]
+    Type -->|Community| Forum[Community Forum]
+    Type -->|Direct| Support[Support Team]
+    
+    AI --> Solution[Get Solution]
+    Docs --> Solution
+    Forum --> Solution
+    Support --> Solution
+    
+    Solution --> Resolved{Resolved?}
+    Resolved -->|Yes| Continue[Continue Learning]
+    Resolved -->|No| Escalate[Escalate Issue]
+    Escalate --> Support
+
+%% 6. Interactive Learning Tools Flow
+graph TD
+    Start([Access Tools]) --> ToolType{Select Tool}
+    
+    ToolType -->|Flashcards| Cards[Flashcard System]
+    ToolType -->|Practice| Exercise[Practice Engine]
+    ToolType -->|Visual| Visual[Visual Tools]
+    
+    Cards --> Study[Study Session]
+    Exercise --> Practice[Practice Session]
+    Visual --> Learn[Learning Session]
+    
+    Study --> Track[Track Progress]
+    Practice --> Track
+    Learn --> Track
+    
+    Track --> Update[Update Profile]
+    Update --> Suggest[Get Suggestions]
+    Suggest --> Next[Next Session] 
